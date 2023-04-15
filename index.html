@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Ramadan-ul-Mubarik</h1><br>
+        </div>
+        <h3>Sahri Aftari Timer</h3> 
+        <div class="head">
+            <h2>
+            Day
+            <span id="roza"></span>
+            Ramadan
+            <br><br>
+            Sahri Last Time 
+            <span id="shari"></span>
+            <br>
+            &
+            <br>
+            Aftari Time 
+            <span id="Iftari"></span>
+        </h2>
+        <button onclick="refresh()">Again Click...</button>
+
+        <br>
+        <p>Karachi || Pakistan</p>
+        </div>
+    </div>
+
+    <script>
+         var shari = ["5:17  AM", "5:16am  AM", "5:15  AM", "5:14  AM", "5:13  AM", "5:11  AM", "5:10  AM", "5:09  AM", "5:08  AM", "5:07  AM", "5:06  AM", "5:05  AM", "5:04  AM", "5:02  AM", "5:01  AM", "5:00  AM", "4:59  AM", "4:58  AM", "4:57  AM", "4:56  AM", "4:55  AM", "4:54  AM", "4:52  AM", "4:51  AM", "4:50  AM", "4:49  AM", "4:48  AM", "4:47  AM", "4:47  AM", "4:45  AM"];
+         var Iftari = ["6:45  PM", "6:45  PM", "6:45  PM", "6:46  PM", "6:46  PM", "6:47  PM", "6:47  PM", "6:48  PM", "6:48  PM", "6:48  PM", "6:49  PM", "6:49  PM", "6:50  PM", "6:50  PM", "6:51  PM", "6:51  PM", "6:51  PM", "6:52  PM", "6:52  PM", "6:53  PM", "6:53  PM", "6:54  PM", "6:54  PM", "6:55  PM", "6:55  PM", "6:55  PM", "6:56  PM", "6:56  PM", "6:57  PM", "6:57  PM"];
+         console.log(Iftari.length);
+         console.log(shari.length);
+var roza = prompt("Today With Ramadan");
+var iftar = Iftari[roza-1];
+var sehr = shari[roza-1];
+if(iftar == undefined & sehr == undefined){
+    iftar = "00.00"
+    sehr = "00.00"
+}
+document.getElementById("roza").innerHTML=roza
+document.getElementById("Iftari").innerHTML=iftar + " "
+document.getElementById("shari").innerHTML=sehr + " "
+function refresh() {
+            location.reload()
+        }  
+          </script>
+</body>
+</html>
